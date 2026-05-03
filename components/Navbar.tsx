@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -18,9 +19,13 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0B1F3A] text-sm font-bold text-white">
-            QF
-          </div>
+          <Image
+            src="/images/queenfinancial-logo.png"
+            alt="Queen Financial Group Inc. logo"
+            width={48}
+            height={48}
+            className="h-18 w-auto"
+          />
 
           <div>
             <p className="text-base font-semibold text-[#0B1F3A]">
