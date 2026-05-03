@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import SectionTitle from "@/components/SectionTitle";
@@ -15,6 +16,8 @@ export default function Home() {
           description="Queen Financial Group provides professional services across investment, insurance, and financial planning."
         />
       </section>
+
+      <Footer />
     </main>
   );
 }
