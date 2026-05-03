@@ -1,4 +1,4 @@
-import Link from "next/link";
+import ButtonLink from "./ButtonLink";
 
 export default function Hero() {
   return (
@@ -9,8 +9,8 @@ export default function Hero() {
             Queen Financial Group Inc.
           </p>
 
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-[#7A1E1E] sm:text-5xl lg:text-6xl">
-            Financial planning, investment, and insurance solutions.
+          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-[#0B1F3A] sm:text-5xl lg:text-6xl">
+          Financial planning, investment, and insurance solutions.
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
@@ -19,19 +19,10 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="#contact"
-              className="rounded-full bg-[#7A1E1E] px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-[#5F1717] focus:outline-none focus:ring-2 focus:ring-[#7A1E1E] focus:ring-offset-2"
-            >
-              Book a Consultation
-            </Link>
-
-            <Link
-              href="#services"
-              className="rounded-full border border-[#7A1E1E] px-6 py-3 text-center text-sm font-semibold text-[#7A1E1E] transition hover:bg-[#7A1E1E] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#7A1E1E] focus:ring-offset-2"
-            >
+            <ButtonLink href="#contact">Book a Consultation</ButtonLink>
+            <ButtonLink href="#services" variant="secondary">
               Explore Services
-            </Link>
+            </ButtonLink>
           </div>
 
           <div className="mt-10 grid gap-4 border-t border-gray-200 pt-6 sm:grid-cols-3">
