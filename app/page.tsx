@@ -1,3 +1,4 @@
+import RegulatoryLinks from "@/components/RegulatoryLinks";
 import ButtonLink from "@/components/ButtonLink";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -188,7 +189,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
+      <RegulatoryLinks />
       <Footer />
     </main>
   );
