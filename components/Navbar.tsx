@@ -18,21 +18,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center">
           <Image
             src="/images/queenfinancial-logo.png"
             alt="Queen Financial Group Inc. logo"
-            width={48}
-            height={48}
-            className="h-18 w-auto"
+            width={260}
+            height={80}
+            className="h-16 w-auto"
+            priority
           />
-
-          <div>
-            <p className="text-base font-semibold text-[#0B1F3A]">
-              Queen Financial
-            </p>
-            <p className="text-xs text-gray-500">Group Inc.</p>
-          </div>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -59,7 +53,7 @@ export default function Navbar() {
             href="#contact"
             className="rounded-full bg-[#0B1F3A] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#12345f]"
           >
-            Contact Us
+            Book Consultation
           </Link>
         </div>
 
@@ -104,7 +98,7 @@ export default function Navbar() {
                 className="rounded-full bg-[#0B1F3A] px-4 py-2 text-center text-sm font-semibold text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact Us
+                Book Consultation
               </Link>
             </div>
           </div>
