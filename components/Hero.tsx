@@ -35,6 +35,18 @@ export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
   const currentSlide = focusSlides[activeSlide];
 
+  const goToPreviousSlide = () => {
+    setActiveSlide((current) =>
+      current === 0 ? focusSlides.length - 1 : current - 1
+    );
+  };
+
+  const goToNextSlide = () => {
+    setActiveSlide((current) =>
+      current === focusSlides.length - 1 ? 0 : current + 1
+    );
+  };
+
   return (
     <>
       <section className="bg-gradient-to-b from-[#FDF8F2] to-white">
@@ -45,7 +57,8 @@ export default function Hero() {
             </p>
 
             <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-[#0B1F3A] sm:text-5xl lg:text-6xl">
-              Financial planning, investment strategies, and insurance solutions.
+              Financial planning, investment strategies, and insurance
+              solutions.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
@@ -73,9 +86,9 @@ export default function Hero() {
               </h2>
 
               <p className="mt-4 leading-7 text-red-50">
-                We provide financial services across financial planning, investment
-                strategies, and insurance solutions with a focus on professionalism,
-                integrity, and client value.
+                We provide financial services across financial planning,
+                investment strategies, and insurance solutions with a focus on
+                professionalism, integrity, and client value.
               </p>
             </div>
           </div>
@@ -139,6 +152,24 @@ export default function Hero() {
                   fill
                   className="object-cover"
                 />
+
+                <button
+                  type="button"
+                  onClick={goToPreviousSlide}
+                  className="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-[#0B1F3A] shadow-sm transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B1F3A] focus:ring-offset-2"
+                  aria-label="View previous service"
+                >
+                  ←
+                </button>
+
+                <button
+                  type="button"
+                  onClick={goToNextSlide}
+                  className="absolute right-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-[#0B1F3A] shadow-sm transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B1F3A] focus:ring-offset-2"
+                  aria-label="View next service"
+                >
+                  →
+                </button>
               </div>
 
               <div className="p-6">
