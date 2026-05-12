@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const navLinks = [
     { label: "Home", href: "/" },
@@ -13,6 +14,17 @@ export default function Navbar() {
     { label: "Services", href: "#services" },
     { label: "Resources", href: "#resources" },
     { label: "Contact", href: "#contact" },
+  ];
+
+  const loginLinks = [
+    {
+      label: "Client Login",
+      href: "https://viefund.queenfinancial.com/myportfolio/",
+    },
+    {
+      label: "Agent Login",
+      href: "https://viefund.queenfinancial.com/",
+    },
   ];
 
   return (
@@ -42,12 +54,39 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Link
-            href="#"
-            className="rounded-full border border-[#0B1F3A] px-4 py-2 text-sm font-semibold text-[#0B1F3A] transition hover:bg-[#0B1F3A] hover:text-white"
+          <div
+            className="relative"
+            onMouseEnter={() => setIsLoginOpen(true)}
+            onMouseLeave={() => setIsLoginOpen(false)}
           >
-            Client Login
-          </Link>
+            <button
+              type="button"
+              onClick={() => setIsLoginOpen(!isLoginOpen)}
+              className="rounded-full border border-[#0B1F3A] px-4 py-2 text-sm font-semibold text-[#0B1F3A] transition hover:bg-[#0B1F3A] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#0B1F3A] focus:ring-offset-2"
+              aria-haspopup="true"
+              aria-expanded={isLoginOpen}
+            >
+              Login
+            </button>
+
+            {isLoginOpen && (
+              <div className="absolute right-0 top-full pt-3">
+                <div className="w-52 rounded-2xl border border-gray-200 bg-white p-2 shadow-lg">
+                  {loginLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded-xl px-4 py-3 text-sm font-medium text-gray-700 transition hover:bg-[#FDF8F2] hover:text-[#7A1E1E]"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
 
           <Link
             href="#contact"
@@ -84,23 +123,34 @@ export default function Navbar() {
               </Link>
             ))}
 
-            <div className="flex flex-col gap-3 pt-2">
-              <Link
-                href="#"
-                className="rounded-full border border-[#0B1F3A] px-4 py-2 text-center text-sm font-semibold text-[#0B1F3A]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Client Login
-              </Link>
+            <div className="border-t border-gray-200 pt-4">
+              <p className="mb-3 text-sm font-semibold text-[#0B1F3A]">
+                Login
+              </p>
 
-              <Link
-                href="#contact"
-                className="rounded-full bg-[#0B1F3A] px-4 py-2 text-center text-sm font-semibold text-white"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Book Consultation
-              </Link>
+              <div className="flex flex-col gap-3">
+                {loginLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-[#0B1F3A] px-4 py-2 text-center text-sm font-semibold text-[#0B1F3A]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
             </div>
+
+            <Link
+              href="#contact"
+              className="rounded-full bg-[#0B1F3A] px-4 py-2 text-center text-sm font-semibold text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Book Consultation
+            </Link>
           </div>
         </div>
       )}
