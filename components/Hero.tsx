@@ -86,9 +86,9 @@ export default function Hero() {
               </h2>
 
               <p className="mt-4 leading-7 text-red-50">
-                We provide financial services across financial planning,
-                investment strategies, and insurance solutions with a focus on
-                professionalism, integrity, and client value.
+                We provide financial services across investments, insurance, and
+                planning needs with a focus on professionalism, integrity, and client
+                value.
               </p>
             </div>
           </div>

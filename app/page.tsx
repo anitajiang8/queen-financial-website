@@ -37,38 +37,81 @@ export default function Home() {
       <Hero />
 
       <section id="about" className="bg-white px-6 py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
-          <SectionTitle
-            eyebrow="About Queen Financial"
-            title="Professional financial services built around client goals."
-            description="Queen Financial Group Inc. provides financial services across investment, insurance, and planning needs. The company is committed to professionalism, integrity, and long-term client value."
-            align="left"
-          />
+  <div className="mx-auto max-w-7xl">
+    <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <div>
+        <SectionTitle
+          eyebrow="About Queen Financial"
+          title="Professional financial services built around client goals."
+          align="left"
+        />
 
-          <div className="rounded-[2rem] border border-gray-200 bg-[#FDF8F2] p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A44C]">
-              Our Mission
-            </p>
+        <article className="mt-8 rounded-[2rem] border border-gray-200 bg-[#FDF8F2] p-8 shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A44C]">
+            Our Mission
+          </p>
 
-            <h3 className="mt-4 text-2xl font-bold text-[#0B1F3A]">
-              Helping clients plan with clarity and confidence.
-            </h3>
+          <h3 className="mt-4 text-2xl font-bold leading-snug text-[#0B1F3A]">
+            Helping clients plan with clarity and confidence to achieve their
+            financial goals.
+          </h3>
 
-            <p className="mt-4 leading-7 text-gray-600">
-              The redesign focuses on making Queen Financial&apos;s services
-              easier to understand, easier to navigate, and easier to access
-              across desktop and mobile devices.
-            </p>
-          </div>
-        </div>
-      </section>
+          <p className="mt-5 leading-7 text-gray-600">
+            Queen Financial Group Inc. (QFG) provides financial services across
+            investments, insurance, and financial planning needs. The company is
+            committed to professionalism, integrity, and long-term client value.
+          </p>
+        </article>
+      </div>
+
+      <div className="grid gap-5">
+        <article className="rounded-[2rem] border border-gray-200 bg-white p-7 shadow-sm">
+          <h3 className="text-xl font-bold text-[#0B1F3A]">
+            One-step investment services
+          </h3>
+
+          <p className="mt-3 leading-7 text-gray-600">
+            Queen Financial Group Inc. offers one-step investment services in
+            RRSP, Group RRSP, RESP, and regular investment accounts, with
+            thousands of mutual funds and exempt products available in the
+            Canadian investment market for clients.
+          </p>
+        </article>
+
+        <article className="rounded-[2rem] border border-gray-200 bg-white p-7 shadow-sm">
+          <h3 className="text-xl font-bold text-[#0B1F3A]">
+            Trusted financial products
+          </h3>
+
+          <p className="mt-3 leading-7 text-gray-600">
+            Queen Financial Group Inc. offers extensive investment products from
+            trusted financial institutions such as banks, fund companies, and
+            insurance companies in North America.
+          </p>
+        </article>
+
+        <article className="rounded-[2rem] border border-gray-200 bg-white p-7 shadow-sm">
+          <h3 className="text-xl font-bold text-[#0B1F3A]">
+            Support for long-term goals
+          </h3>
+
+          <p className="mt-3 leading-7 text-gray-600">
+            We&apos;re ready to help investors achieve various investment goals,
+            from purchasing homes and cars, to dream vacations and securing a
+            happy retirement.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="services" className="bg-[#F8F7F3] px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             eyebrow="Our Services"
-            title="Comprehensive financial solutions"
-            description="Explore the main service areas Queen Financial provides to help clients protect, plan, and grow their financial future."
+            title="One-step financial services with comprehensive financial products and solutions"
+            description="We provide customized financial advice to help clients protect, plan, and grow their financial future."
           />
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -189,7 +232,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       <RegulatoryLinks />
       <Footer />
     </main>
