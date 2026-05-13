@@ -6,26 +6,26 @@ import Navbar from "@/components/Navbar";
 import SectionTitle from "@/components/SectionTitle";
 
 export default function Home() {
-  const services = [
-      {
-        title: "Investment Services",
-        description:
-          "Investment solutions and guidance designed to support long-term financial goals.",
-        href: "/services/investment-services",
-      },
-      {
-        title: "Insurance Planning",
-        description:
-          "Protection strategies for individuals, families, and businesses through insurance planning.",
-        href: "/services/insurance-planning",
-      },
-      {
-        title: "Financial Planning",
-        description:
-          "Personalized support to help clients make informed financial decisions for the future.",
-        href: "/services/financial-planning",
-      },
-    ];
+ const services = [
+    {
+      title: "Financial Planning",
+      description:
+        "Customized financial guidance to help clients make informed decisions and work toward their financial goals.",
+      href: "/services/financial-planning",
+    },
+    {
+      title: "Investment Strategies",
+      description:
+        "One-step investment services for RRSP, Group RRSP, RESP, and regular investment accounts.",
+      href: "/services/investment-strategies",
+    },
+    {
+      title: "Insurance Solutions",
+      description:
+        "Insurance products and planning support to help clients protect themselves, their families, and their future.",
+      href: "/services/insurance-solutions",
+    },
+  ];
 
   const advantages = [
     "Professional financial guidance",
