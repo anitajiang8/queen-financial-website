@@ -7,22 +7,25 @@ import SectionTitle from "@/components/SectionTitle";
 
 export default function Home() {
   const services = [
-    {
-      title: "Investment Services",
-      description:
-        "Investment solutions and guidance designed to support long-term financial goals.",
-    },
-    {
-      title: "Insurance Planning",
-      description:
-        "Protection strategies for individuals, families, and businesses through insurance planning.",
-    },
-    {
-      title: "Financial Planning",
-      description:
-        "Personalized support to help clients make informed financial decisions for the future.",
-    },
-  ];
+      {
+        title: "Investment Services",
+        description:
+          "Investment solutions and guidance designed to support long-term financial goals.",
+        href: "/services/investment-services",
+      },
+      {
+        title: "Insurance Planning",
+        description:
+          "Protection strategies for individuals, families, and businesses through insurance planning.",
+        href: "/services/insurance-planning",
+      },
+      {
+        title: "Financial Planning",
+        description:
+          "Personalized support to help clients make informed financial decisions for the future.",
+        href: "/services/financial-planning",
+      },
+    ];
 
   const advantages = [
     "Professional financial guidance",
@@ -133,7 +136,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6">
-                  <ButtonLink href="#contact" variant="secondary">
+                  <ButtonLink href={service.href} variant="secondary">
                     Learn More
                   </ButtonLink>
                 </div>
