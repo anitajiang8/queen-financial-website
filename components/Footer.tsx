@@ -13,8 +13,8 @@ export default function Footer() {
   ];
 
   const accountLinks = [
-    { label: "Client Login", href: "#" },
-    { label: "Agent Login", href: "#" },
+    { label: "Client Login", href: "https://viefund.queenfinancial.com/myportfolio/" },
+    { label: "Agent Login", href: "https://viefund.queenfinancial.com/" },
   ];
 
   const legalLinks = [
