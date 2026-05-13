@@ -179,36 +179,53 @@ export default function Home() {
       </section>
 
       <section id="resources" className="bg-[#F8F7F3] px-6 py-20">
-        <div className="mx-auto max-w-7xl">
-          <SectionTitle
-            eyebrow="Resources"
-            title="Latest news and company updates"
-            description="A future section for financial resources, company announcements, and helpful updates for clients."
-          />
+  <div className="mx-auto max-w-7xl">
+    <SectionTitle
+      eyebrow="Resources"
+      title="Featured Video Resources"
+      description="Watch selected video resources from Queen Financial Group to learn more about financial planning, investment strategies, insurance solutions, and company updates."
+    />
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((item) => (
-              <article
-                key={item}
-                className="rounded-[1.5rem] border border-gray-200 bg-white p-6 shadow-sm"
-              >
-                <p className="text-sm font-semibold text-[#C9A44C]">
-                  Update {item}
-                </p>
+    <div className="mt-8 grid gap-8 md:grid-cols-2">
+      {[
+        {
+          title: "Queen Financial Group",
+          youtubeEmbedUrl: "https://www.youtube.com/embed/NaP8bdEEc5o?start=6",
+        },
+        {
+          title: "Outstanding Chinese Canadian Entrepreneurs",
+          youtubeEmbedUrl: "https://www.youtube.com/embed/EUTENYOcbtY",
+        },
+        {
+          title: "Queen Financial Corporate Promotional Video",
+          youtubeEmbedUrl: "https://www.youtube.com/embed/NbmQMyvFpBw",
+        },
+        {
+          title: "About the Founder",
+          youtubeEmbedUrl: "https://www.youtube.com/embed/s-xFkdU4vQQ",
+        },
+      ].map((video) => (
+        <article key={video.title}>
+          <h3 className="mb-5 text-center text-lg font-bold text-[#0B1F3A]">
+            {video.title}
+          </h3>
 
-                <h3 className="mt-3 text-xl font-bold text-[#0B1F3A]">
-                  Resource title placeholder
-                </h3>
-
-                <p className="mt-3 leading-7 text-gray-600">
-                  This area can be used for news, announcements, or educational
-                  financial content from Queen Financial.
-                </p>
-              </article>
-            ))}
+          <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <div className="aspect-video">
+              <iframe
+                src={video.youtubeEmbedUrl}
+                title={video.title}
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-5xl rounded-[2rem] bg-[#0B1F3A] px-8 py-14 text-center text-white shadow-sm">
