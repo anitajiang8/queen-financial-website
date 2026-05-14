@@ -1,4 +1,3 @@
-import ButtonLink from "@/components/ButtonLink";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -22,44 +21,83 @@ export default function InsuranceSolutionsPage() {
             support to help clients protect themselves, their families, and
             their future with confidence.
           </p>
-
-          <div className="mt-8">
-            <ButtonLink href="/#contact">Book a Consultation</ButtonLink>
-          </div>
         </div>
       </section>
 
-      <section className="px-6 py-16">
-        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3">
-          <div className="rounded-[2rem] border border-gray-200 bg-white p-7 shadow-sm">
-            <h2 className="text-xl font-bold text-[#0B1F3A]">
-              Personal Protection
+      <section className="px-6 pb-16 pt-6">
+        <div className="mx-auto max-w-5xl">
+          <div className="rounded-[2rem] border border-gray-200 bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-[#0B1F3A]">
+              Insurance Business
             </h2>
-            <p className="mt-3 leading-7 text-gray-600">
-              Insurance planning support designed to help individuals and
-              families prepare for unexpected events and protect what matters
-              most.
-            </p>
+
+            <div className="mt-5 space-y-5 leading-8 text-gray-600">
+              <p>
+                Queen Financial Group supports clients with insurance planning
+                designed to protect individuals, families, and businesses. Our
+                services are built around practical guidance, trusted insurance
+                products, and long-term financial security.
+              </p>
+
+              <p>
+                Insurance planning can play an important role in a complete
+                financial strategy by helping clients prepare for unexpected
+                events, protect loved ones, and build confidence for the future.
+              </p>
+            </div>
           </div>
 
-          <div className="rounded-[2rem] border border-gray-200 bg-white p-7 shadow-sm">
-            <h2 className="text-xl font-bold text-[#0B1F3A]">
-              Family Security
-            </h2>
-            <p className="mt-3 leading-7 text-gray-600">
-              Guidance to help clients consider protection strategies that
-              support family stability, future planning, and long-term peace of
-              mind.
-            </p>
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
+            <article className="rounded-[2rem] border border-gray-200 bg-[#FDF8F2] p-7 shadow-sm">
+              <h2 className="text-xl font-bold text-[#0B1F3A]">
+                Company Business Scope
+              </h2>
+
+              <p className="mt-3 leading-7 text-gray-600">
+                Queen Financial Group provides services across financial
+                planning, tax planning, retirement funds, workers&apos; funds,
+                life insurance, critical illness insurance, disability
+                insurance, travel insurance, RESP, RRSP, segregated funds, and
+                related financial solutions.
+              </p>
+            </article>
+
+            <article className="rounded-[2rem] border border-gray-200 bg-white p-7 shadow-sm">
+              <h2 className="text-xl font-bold text-[#0B1F3A]">
+                Insurance Products
+              </h2>
+
+              <p className="mt-3 leading-7 text-gray-600">
+                We support clients with insurance products from trusted
+                providers including AXA, Manulife, Sun Life, Canada Life, RBC
+                Life, Standard Life, AIG, Equitable Life, Empire Life,
+                Industrial Alliance, National Life, and more.
+              </p>
+            </article>
+
+            <article className="rounded-[2rem] border border-gray-200 bg-white p-7 shadow-sm">
+              <h2 className="text-xl font-bold text-[#0B1F3A]">
+                Protection for Every Stage
+              </h2>
+
+              <p className="mt-3 leading-7 text-gray-600">
+                Our insurance solutions are designed to help clients protect
+                their income, family, health, travel plans, and long-term
+                financial goals through clear and personalized planning support.
+              </p>
+            </article>
           </div>
 
-          <div className="rounded-[2rem] border border-gray-200 bg-white p-7 shadow-sm">
-            <h2 className="text-xl font-bold text-[#0B1F3A]">
-              Planning Confidence
-            </h2>
-            <p className="mt-3 leading-7 text-gray-600">
-              Insurance solutions that can work alongside financial planning and
-              investment strategies to create a more complete financial plan.
+          <div className="mt-8 rounded-[2rem] bg-[#7A1E1E] p-8 text-white shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A44C]">
+              Insurance Planning Focus
+            </p>
+
+            <p className="mt-4 leading-8 text-red-50">
+              From life insurance and critical illness coverage to disability
+              insurance, travel insurance, and segregated funds, Queen Financial
+              Group helps clients explore protection strategies that support
+              both present needs and future financial security.
             </p>
           </div>
         </div>
