@@ -123,9 +123,6 @@ export default function Home() {
                 key={service.title}
                 className="rounded-[1.5rem] border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#7A1E1E] text-lg font-bold text-white">
-                  QF
-                </div>
 
                 <h3 className="text-xl font-bold text-[#0B1F3A]">
                   {service.title}

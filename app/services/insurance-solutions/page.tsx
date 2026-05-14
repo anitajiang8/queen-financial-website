@@ -7,7 +7,7 @@ export default function InsuranceSolutionsPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      <section className="bg-gradient-to-b from-[#FDF8F2] to-white px-6 py-20">
+      <section className="bg-gradient-to-b from-[#FDF8F2] to-white px-6 pb-10 pt-16">
         <div className="mx-auto max-w-5xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A44C]">
             Our Services
