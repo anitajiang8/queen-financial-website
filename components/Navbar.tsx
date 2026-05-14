@@ -7,13 +7,28 @@ import { useState } from "react";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Resources", href: "#resources" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "/#about" },
+    { label: "Resources", href: "/#resources" },
+    { label: "Contact", href: "/#contact" },
+  ];
+
+  const serviceLinks = [
+    {
+      label: "Financial Planning",
+      href: "/services/financial-planning",
+    },
+    {
+      label: "Investment Strategies",
+      href: "/services/investment-strategies",
+    },
+    {
+      label: "Insurance Solutions",
+      href: "/services/insurance-solutions",
+    },
   ];
 
   const loginLinks = [
@@ -42,7 +57,49 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
+          {navLinks.slice(0, 2).map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-sm font-medium text-gray-700 transition hover:text-[#0B1F3A]"
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          <div
+            className="relative"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button
+              type="button"
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              className="text-sm font-medium text-gray-700 transition hover:text-[#0B1F3A]"
+              aria-haspopup="true"
+              aria-expanded={isServicesOpen}
+            >
+              Services
+            </button>
+
+            {isServicesOpen && (
+              <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3">
+                <div className="w-64 rounded-2xl border border-gray-200 bg-white p-2 shadow-lg">
+                  {serviceLinks.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className="block rounded-xl px-4 py-3 text-sm font-medium text-gray-700 transition hover:bg-[#FDF8F2] hover:text-[#7A1E1E]"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {navLinks.slice(2).map((link) => (
             <Link
               key={link.label}
               href={link.href}
@@ -89,7 +146,7 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="#contact"
+            href="/#contact"
             className="rounded-full bg-[#0B1F3A] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#12345f]"
           >
             Book Consultation
@@ -112,7 +169,37 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="border-t border-gray-200 bg-white px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {navLinks.slice(0, 2).map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-gray-700"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            <div className="border-t border-gray-200 pt-4">
+              <p className="mb-3 text-sm font-semibold text-[#0B1F3A]">
+                Services
+              </p>
+
+              <div className="flex flex-col gap-3">
+                {serviceLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="rounded-full border border-[#0B1F3A] px-4 py-2 text-center text-sm font-semibold text-[#0B1F3A]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {navLinks.slice(2).map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
@@ -145,7 +232,7 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="#contact"
+              href="/#contact"
               className="rounded-full bg-[#0B1F3A] px-4 py-2 text-center text-sm font-semibold text-white"
               onClick={() => setIsMenuOpen(false)}
             >
