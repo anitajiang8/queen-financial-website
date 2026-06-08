@@ -243,7 +243,7 @@ export default function Home() {
           </p>
 
           <div className="mt-8">
-            <ButtonLink href="#contact" variant="light">
+            <ButtonLink href="/book-consultation" variant="light">
               Contact Our Team
             </ButtonLink>
           </div>

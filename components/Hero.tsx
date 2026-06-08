@@ -85,7 +85,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="#contact" variant="light">
+            <ButtonLink href="/book-consultation" variant="light">
               Book a Consultation
             </ButtonLink>
 

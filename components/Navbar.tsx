@@ -13,7 +13,7 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "About", href: "/#about" },
     { label: "Resources", href: "/#resources" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/book-consultation" },
   ];
 
   const serviceLinks = [
@@ -146,7 +146,7 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/#contact"
+            href="/book-consultation"
             className="rounded-full bg-[#0B1F3A] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#12345f]"
           >
             Book Consultation
