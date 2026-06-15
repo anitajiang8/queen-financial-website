@@ -161,10 +161,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-gray-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 border-t border-white/10 pt-6 text-sm leading-6 text-gray-400">
           <p>© {currentYear} Queen Financial Group Inc. All rights reserved.</p>
 
-          <p>Designed and developed as a modern website redesign.</p>
+          <p className="mt-3">
+            All mutual funds investments and EMD investments are offered through Queen
+            Financial Group Inc. All life insurance products and segregated funds
+            investments are offered through Queen Wealth Management Inc.
+          </p>
         </div>
       </div>
     </footer>

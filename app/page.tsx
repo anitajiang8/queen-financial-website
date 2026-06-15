@@ -183,7 +183,6 @@ export default function Home() {
     <SectionTitle
       eyebrow="Resources"
       title="Featured Video Resources"
-      description="Watch selected video resources from Queen Financial Group to learn more about financial planning, investment strategies, insurance solutions, and company updates."
     />
 
     <div className="mt-8 grid gap-8 md:grid-cols-2">
