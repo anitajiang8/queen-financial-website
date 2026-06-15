@@ -5,11 +5,11 @@ export default function RegulatoryLinks() {
   const links = [
     {
       label: "Conflict of Interest and Legal",
-      href: "https://queenfinancial.ca/wp-content/uploads/2022/08/Conflict-of-Interest-and-Legal.pdf",
+      href: "/documents/conflict-of-interest.pdf",
     },
     {
       label: "RDI Disclosure",
-      href: "https://queenfinancial.ca/wp-content/uploads/2023/03/RDI-Disclosure.pdf",
+      href: "/documents/rdi-disclosure.pdf",
     },
     {
       label: "Privacy",
@@ -36,13 +36,15 @@ export default function RegulatoryLinks() {
 
         <div className="mt-10 grid gap-3 rounded-2xl bg-white p-4 shadow-sm sm:grid-cols-2 lg:grid-cols-4">
           {links.map((link) => (
-            <Link
+            <a
               key={link.label}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-xl px-4 py-4 text-center text-sm font-semibold text-[#0B1F3A] underline-offset-4 transition hover:bg-[#FDF8F2] hover:text-[#7A1E1E] hover:underline focus:outline-none focus:ring-2 focus:ring-[#0B1F3A] focus:ring-offset-2"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </div>
       </div>

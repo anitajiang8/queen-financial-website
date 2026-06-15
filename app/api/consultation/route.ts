@@ -19,8 +19,17 @@ function sanitize(value: string) {
 }
 
 export async function POST(request: Request) {
+  console.log("Consultation API route was called.");
+
   try {
+    console.log("Environment check:", {
+      hasResendKey: Boolean(process.env.RESEND_API_KEY),
+      toEmail: process.env.CONSULTATION_TO_EMAIL,
+      fromEmail: process.env.CONSULTATION_FROM_EMAIL,
+    });
+
     const body = (await request.json()) as ConsultationRequest;
+    console.log("Request body received:", body);
 
     const name = sanitize(body.name || "");
     const email = sanitize(body.email || "");
@@ -42,6 +51,13 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!process.env.RESEND_API_KEY) {
+      return Response.json(
+        { error: "Resend API key is missing." },
+        { status: 500 }
+      );
+    }
+
     if (!process.env.CONSULTATION_TO_EMAIL) {
       return Response.json(
         { error: "Consultation recipient email is not configured." },
@@ -56,7 +72,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { error } = await resend.emails.send({
+    const result = await resend.emails.send({
       from: process.env.CONSULTATION_FROM_EMAIL,
       to: process.env.CONSULTATION_TO_EMAIL,
       replyTo: email,
@@ -76,9 +92,15 @@ export async function POST(request: Request) {
       `,
     });
 
-    if (error) {
+    console.log("Resend result:", result);
+
+    if (result.error) {
       return Response.json(
-        { error: "Unable to send the consultation request." },
+        {
+          error:
+            result.error.message ||
+            "Unable to send the consultation request.",
+        },
         { status: 500 }
       );
     }
@@ -87,10 +109,12 @@ export async function POST(request: Request) {
       { message: "Consultation request sent successfully." },
       { status: 200 }
     );
-  } catch {
+  } catch (error) {
+    console.error("Consultation API error:", error);
+
     return Response.json(
-      { error: "Invalid request. Please try again." },
-      { status: 400 }
+      { error: "Server error. Check terminal logs." },
+      { status: 500 }
     );
   }
 }
