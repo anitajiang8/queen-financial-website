@@ -13,7 +13,7 @@ export default function RegulatoryLinks() {
     },
     {
       label: "Privacy",
-      href: "https://queenfinancial.ca/wp-content/uploads/2022/08/Privacy.pdf",
+      href: "/documents/privacy.pdf",
     },
     {
       label: "Unclaimed Property",

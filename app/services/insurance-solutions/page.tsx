@@ -69,7 +69,7 @@ export default function InsuranceSolutionsPage() {
 
               <p className="mt-3 leading-7 text-gray-600">
                 We support clients with insurance products from trusted
-                providers including AXA, Manulife, Sun Life, Canada Life, RBC
+                providers including Manulife, Sun Life, Canada Life, RBC
                 Life, Standard Life, AIG, Equitable Life, Empire Life,
                 Industrial Alliance, National Life, and more.
               </p>
